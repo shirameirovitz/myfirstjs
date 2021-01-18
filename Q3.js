@@ -1,22 +1,19 @@
-let X=4;
-let Y=0;
-let Z=-2;
-
-if(X>Y && Y>Z){
-    alert("X, Y, Z");
-}
-else if(X>Z && Z>Y){
-    alert("X, Z, Y");
-}
-else if(Y>Z && Z>X){
-    alert("Y, Z, X");
-}
-else if(Y>X && X>Z){
-    alert("Y, X, Z");
-}
-else if(Z>Y && Y>X){
-    alert("Z, Y, X");
-}
-else if(Z>X && X>Y){
-    alert("Z, X, Y");
-}
+let inputList= [0, -1, 4]
+let swap;
+    let n = inputList.length-1;
+    let sortedList=inputList;
+    do {
+        swap = false;
+        for (let i=0; i < n; i++)
+        {
+            if (sortedList[i] < sortedList[i+1])
+            {
+               let temp = sortedList[i];
+               sortedList[i] = sortedList[i+1];
+               sortedList[i+1] = temp;
+               swap = true;
+            }
+        }
+        n--;
+    } while (swap);
+    alert (sortedList);
