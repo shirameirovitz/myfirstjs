@@ -1,4 +1,4 @@
-let inputList= [0, -1, 4]
+let inputList= [0, -1, 4];
 let swap;
     let n = inputList.length-1;
     let sortedList=inputList;
@@ -16,4 +16,4 @@ let swap;
         }
         n--;
     } while (swap);
-    alert (sortedList[0]);
+    alert (sortedList);
